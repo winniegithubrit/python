@@ -3,13 +3,13 @@
 # #creating user inputs in python
 # namer = input("What is your name? ")
 # print(namer)
-geans = "johney"
-print(geans)
-print(f"i want to see {geans}")
-#functions in python
-def player(number1,number2):
-  print(number1 * number2)
-player(23,66)
+# geans = "johney"
+# print(geans)
+# print(f"i want to see {geans}")
+# #functions in python
+# def player(number1,number2):
+#   print(number1 * number2)
+# player(23,66)
 # def average(num1,num2):
 #   addition = num1 + num2
 #   return addition / 2
@@ -41,6 +41,41 @@ programming_languages = ["Python","Java","JavaScript","Ruby"]
 #   print("name of book:" + key)
 #   print(value)
 #reverse looping
-persons  = [1, 2, 'Python', 'Program', 15.9]
-for people in reversed(persons):
-  print(people)
+# persons  = [1, 2, 'Python', 'Program', 15.9]
+# for people in reversed(persons):
+#   print(people)
+class Item:
+  all = []
+  rate = 0.8
+  def __init__(self,name,price,quantity):
+    self.name = name
+    self.price = price
+    self.quantity = quantity
+    Item.all.append(self)
+  def calculate(self):
+    return self.price * self.quantity
+# applying discount to our class
+  def discount(self,price):
+    self.price = price * Item.rate
+  
+item1 = Item("Clara",100,2)
+item1.discount(100)
+print(item1.name)
+print(item1.price)
+print(item1.quantity)
+print(item1.calculate())
+print(item1.price)
+for instance in Item.all:
+  print(instance.name)
+
+
+# class Things:
+#   def __init__(self,namer,quantifier):
+#     self.namer =  namer
+#     self.quantifier = quantifier
+    
+#     return self.namer * self.quantifier
+#   item2 = Things(100,40)
+#   print(item2.namer)
+#   print(item2.quantifier)
+    
